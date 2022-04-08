@@ -1182,3 +1182,166 @@ mayo
 i have put the condiment on the sandwich
 recalling the order
 >>> 
+= RESTART: /Users/saurabhkishore/Desktop/Carleton/Winter2022/CGSC-4601/python_actr-main/simple_environment_v3.py
+   0.000 agent.production_match_delay 0
+   0.000 agent.production_threshold None
+   0.000 agent.production_time 0.05
+   0.000 agent.production_time_sd None
+   0.000 bread.isa bread
+   0.000 bread.location on_counter
+   0.000 bread_top.isa bread_top
+   0.000 bread_top.location on_counter
+   0.000 cheese.isa cheese
+   0.000 cheese.location on_counter
+   0.000 ham.isa ham
+   0.000 ham.location on_counter
+   0.000 lettuce.isa lettuce
+   0.000 lettuce.location on_counter
+   0.000 agent.production bread_bottom
+   0.050 agent.production None
+I will do bread on bottom
+   0.050 agent.focus.chunk goal:sandwich object:cheese
+done the bread
+   2.050 bread.location on_plate
+   2.050 agent.production cheese
+   2.100 agent.production None
+I will do cheese
+   2.100 agent.focus.chunk goal:sandwich object:ham
+done the cheese
+   5.100 cheese.location on_plate
+   5.100 agent.production maple_ham
+   5.150 agent.production None
+I will do ham
+   5.150 agent.focus.chunk goal:sandwich object:lettuce
+done the ham
+   7.650 ham.location on_plate
+   7.650 agent.production iceberg_lettuce
+   7.700 agent.production None
+I will do lettuce
+   7.700 agent.focus.chunk goal:sandwich object:bread_top
+   7.700 agent.production bread_top
+   7.750 agent.production None
+I will do bread on top
+   7.750 agent.focus.chunk goal:sandwich object:none state:finished
+done the bread
+   9.750 bread_top.location on_plate
+   9.750 agent.production finished
+   9.800 agent.production None
+I have made a ham and cheese sandwich
+   9.800 agent.focus.chunk goal:sandwich state:simulation_over
+done the lettuce
+Traceback (most recent call last):
+  File "/Users/saurabhkishore/Desktop/Carleton/Winter2022/CGSC-4601/python_actr-main/simple_environment_v3.py", line 72, in <module>
+    env.run()
+  File "/Users/saurabhkishore/Desktop/Carleton/Winter2022/CGSC-4601/python_actr-main/python_actr/model.py", line 247, in run
+    self.sch.run()
+  File "/Users/saurabhkishore/Desktop/Carleton/Winter2022/CGSC-4601/python_actr-main/python_actr/scheduler.py", line 116, in run
+    self.do_event(heapq.heappop(self.queue))
+  File "/Users/saurabhkishore/Desktop/Carleton/Winter2022/CGSC-4601/python_actr-main/python_actr/scheduler.py", line 161, in do_event
+    result=event.func(*event.args,**event.keys)
+  File "/Users/saurabhkishore/Desktop/Carleton/Winter2022/CGSC-4601/python_actr-main/python_actr/model.py", line 26, in _generator
+    for x in self.func(self.obj,*args,**keys):
+  File "/Users/saurabhkishore/Desktop/Carleton/Winter2022/CGSC-4601/python_actr-main/simple_environment_v3.py", line 26, in do_lettuce
+    self.parentparent.lettuce.location='on_plate'
+AttributeError: 'MotorModule' object has no attribute 'parentparent'
+>>> 
+= RESTART: /Users/saurabhkishore/Desktop/Carleton/Winter2022/CGSC-4601/python_actr-main/simple_environment_v3.py
+   0.000 agent.production_match_delay 0
+   0.000 agent.production_threshold None
+   0.000 agent.production_time 0.05
+   0.000 agent.production_time_sd None
+   0.000 bread.isa bread
+   0.000 bread.location on_counter
+   0.000 bread_top.isa bread_top
+   0.000 bread_top.location on_counter
+   0.000 cheese.isa cheese
+   0.000 cheese.location on_counter
+   0.000 ham.isa ham
+   0.000 ham.location on_counter
+   0.000 lettuce.isa lettuce
+   0.000 lettuce.location on_counter
+   0.000 agent.production bread_bottom
+   0.050 agent.production None
+I will do bread on bottom
+   0.050 agent.focus.chunk goal:sandwich object:cheese
+done the bread
+   2.050 bread.location on_plate
+   2.050 agent.production cheese
+   2.100 agent.production None
+I will do cheese
+   2.100 agent.focus.chunk goal:sandwich object:ham
+done the cheese
+   5.100 cheese.location on_plate
+   5.100 agent.production maple_ham
+   5.150 agent.production None
+I will do ham
+   5.150 agent.focus.chunk goal:sandwich object:lettuce
+done the ham
+   7.650 ham.location on_plate
+   7.650 agent.production iceberg_lettuce
+   7.700 agent.production None
+I will do lettuce
+   7.700 agent.focus.chunk goal:sandwich object:bread_top
+   7.700 agent.production bread_top
+   7.750 agent.production None
+I will do bread on top
+   7.750 agent.focus.chunk goal:sandwich object:none state:finished
+done the bread
+   9.750 bread_top.location on_plate
+   9.750 agent.production finished
+   9.800 agent.production None
+I have made a ham and cheese sandwich
+   9.800 agent.focus.chunk goal:sandwich state:simulation_over
+done the lettuce
+  11.700 lettuce.location on_plate
+>>> 
+= RESTART: /Users/saurabhkishore/Desktop/Carleton/Winter2022/CGSC-4601/python_actr-main/simple_environment_v3.py
+   0.000 agent.production_match_delay 0
+   0.000 agent.production_threshold None
+   0.000 agent.production_time 0.05
+   0.000 agent.production_time_sd None
+   0.000 bread.isa bread
+   0.000 bread.location on_counter
+   0.000 bread_top.isa bread_top
+   0.000 bread_top.location on_counter
+   0.000 cheese.isa cheese
+   0.000 cheese.location on_counter
+   0.000 ham.isa ham
+   0.000 ham.location on_counter
+   0.000 lettuce.isa lettuce
+   0.000 lettuce.location on_counter
+   0.000 agent.production bread_bottom
+   0.050 agent.production None
+I will do bread on bottom
+   0.050 agent.focus.chunk goal:sandwich object:cheese
+done the bread
+   2.050 bread.location on_plate
+   2.050 agent.production cheese
+   2.100 agent.production None
+I will do cheese
+   2.100 agent.focus.chunk goal:sandwich object:ham
+done the cheese
+   5.100 cheese.location on_plate
+   5.100 agent.production maple_ham
+   5.150 agent.production None
+I will do ham
+   5.150 agent.focus.chunk goal:sandwich object:lettuce
+done the ham
+   7.650 ham.location on_plate
+   7.650 agent.production iceberg_lettuce
+   7.700 agent.production None
+I will do lettuce
+   7.700 agent.focus.chunk goal:sandwich object:bread_top
+done the lettuce
+  11.700 lettuce.location on_plate
+  11.700 agent.production bread_top
+  11.750 agent.production None
+I will do bread on top
+  11.750 agent.focus.chunk goal:sandwich object:none state:finished
+done the bread
+  13.750 bread_top.location on_plate
+  13.750 agent.production finished
+  13.800 agent.production None
+I have made a ham and cheese with lettuce sandwich
+  13.800 agent.focus.chunk goal:sandwich state:simulation_over
+>>> 

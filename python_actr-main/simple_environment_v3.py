@@ -4,6 +4,7 @@ class Subway(Model):
     bread=Model(isa='bread',location='on_counter')
     cheese=Model(isa='cheese',location='on_counter')
     ham=Model(isa='ham',location='on_counter')
+    lettuce=Model(isa='lettuce', location='on_counter')
     bread_top=Model(isa='bread_top',location='on_counter')
 
 class MotorModule(Model):     
@@ -19,6 +20,10 @@ class MotorModule(Model):
         yield 2.5
         print("done the ham")
         self.parent.parent.ham.location='on_plate'
+    def do_lettuce(self):
+        yield 4.0
+        print("done the lettuce")
+        self.parent.parent.lettuce.location='on_plate'
     def do_bread_top(self):         
         yield 2                   
         print("done the bread")
@@ -42,15 +47,20 @@ class MyAgent(ACTR):
     def maple_ham(focus='goal:sandwich object:ham', cheese='location:on_plate'):
         print("I will do ham")
         motor.do_ham()
+        focus.set('goal:sandwich object:lettuce')
+        
+    def iceberg_lettuce(focus='goal:sandwich object:lettuce', ham='location:on_plate'):
+        print("I will do lettuce")
+        motor.do_lettuce()
         focus.set('goal:sandwich object:bread_top')
 
-    def bread_top(focus='goal:sandwich object:bread_top', ham='location:on_plate'):
+    def bread_top(focus='goal:sandwich object:bread_top', lettuce='location:on_plate'):
         print("I will do bread on top")
         focus.set('goal:sandwich object:none state:finished')
         motor.do_bread_top()
 
     def finished(focus='goal:sandwich object:none state:finished', bread_top='location:on_plate'):
-        print("I have made a ham and cheese sandwich")
+        print("I have made a ham and cheese with lettuce sandwich")
         focus.set('goal:sandwich state:simulation_over')
         
 
