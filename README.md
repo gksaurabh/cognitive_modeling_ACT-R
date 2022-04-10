@@ -3,14 +3,16 @@
 All documents for this course are contained within the python_actr_main folder since this is where the Python ACT-R library has been installed.
 
 The assignments themselves cover a wide variety of topics within cognitive modeling such as:
-         • Theoretical Issues
+         
+
+        • Theoretical Issues
               • Agency
               • Consciousness
               • 20 questions
               • Systems levels
               • Turing machines
               • Intelligence
-
+              
         • Symbolic Processing
               • Procedural Memory
               • Working Memory
